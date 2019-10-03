@@ -143,10 +143,10 @@ function draw () {
 function mouseDragged () {    
     // draw under certain conditions
     if (mouseX > ux && mouseY > uy && mouseX < ux + uw && mouseY < uy + uw) {
-       
+        console.log(mouseX)
         userPixels.fill(255);       //  draw white circles
         userPixels.stroke(255);
-        userPixels.ellipse(mouseX - ux, mouseY - uy, 8, 8);
+        userPixels.ellipse(mouseX, mouseY - uy, 8, 8);
         let img = userPixels.get();
         smaller.copy(img, 0, 0, uw, uw, 0, 0, smaller.width, smaller.height);
     }
